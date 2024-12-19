@@ -521,11 +521,31 @@
                 }
             }
         },
+        "/api/favorites/{favorite_id}/copy": {
+            "post": {
+                "summary": "/api/favorites/{favorite_id}/copy",
+                "operationId": "post__api_favorites_{favorite_id}_copy",
+                "description": "<br/><br/>",
+                "tags": [],
+                "parameters": [
+                    {
+                        "name": "favorite_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": ""
+                    }
+                ],
+                "responses": {}
+            }
+        },
         "/api/orders": {
             "get": {
                 "summary": "/api/orders",
                 "operationId": "get__api_orders",
-                "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseOrders].df6c1ab'>ApiResponseOk[ResponseOrders]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
+                "description": "<br/><b>Query</b>: <a href='/schemas/GetOrdersParamsSchema.8f03914'>GetOrdersParamsSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseOrders].df6c1ab'>ApiResponseOk[ResponseOrders]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
                 ],
@@ -553,6 +573,21 @@
                         },
                         "required": false,
                         "description": "Количество пропускаемых элементов"
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/components/schemas/GetOrdersParamsSchema.8f03914.OrderTypes"
+                                }
+                            ],
+                            "default": "all",
+                            "description": "Тип заказа"
+                        },
+                        "required": false,
+                        "description": "Тип заказа"
                     }
                 ],
                 "responses": {
@@ -748,13 +783,11 @@
                         }
                     }
                 }
-            }
-        },
-        "/api/orders/estimates/{estimate_id}/cancel": {
-            "post": {
-                "summary": "/api/orders/estimates/{estimate_id}/cancel",
-                "operationId": "post__api_orders_estimates_{estimate_id}_cancel",
-                "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseCancelPayment].df6c1ab'>ApiResponseOk[ResponseCancelPayment]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
+            },
+            "patch": {
+                "summary": "/api/orders/estimates/{estimate_id}",
+                "operationId": "patch__api_orders_estimates_{estimate_id}",
+                "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseEstimate].df6c1ab'>ApiResponseOk[ResponseEstimate]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
                 ],
@@ -775,7 +808,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/ApiResponseOk[ResponseCancelPayment].df6c1ab"
+                                    "$ref": "#/components/schemas/ApiResponseOk[ResponseEstimate].df6c1ab"
                                 }
                             }
                         }
@@ -787,6 +820,36 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResponseValidationErr.df6c1ab"
                                 }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PatchOrderEstimateSchema.8f03914"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/orders/assemblies": {
+            "post": {
+                "summary": "/api/orders/assemblies",
+                "operationId": "post__api_orders_assemblies",
+                "description": "<br/><br/>",
+                "tags": [
+                    "order"
+                ],
+                "parameters": [],
+                "responses": {},
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PostOrderAssembleSchema.8f03914"
                             }
                         }
                     }
@@ -1390,6 +1453,51 @@
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResponseOk[ReviewModel].df6c1ab"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponseValidationErr.df6c1ab"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/hotels/static": {
+            "get": {
+                "summary": "/api/hotels/static",
+                "operationId": "get__api_hotels_static",
+                "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[StaticsSM].df6c1ab'>ApiResponseOk[StaticsSM]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
+                "tags": [
+                    "hotel"
+                ],
+                "parameters": [
+                    {
+                        "name": "authorization",
+                        "in": "header",
+                        "schema": {
+                            "description": "Токен доступа",
+                            "title": "Authorization",
+                            "type": "string"
+                        },
+                        "required": true,
+                        "description": "Токен доступа"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab"
                                 }
                             }
                         }
@@ -3680,56 +3788,6 @@
                 "title": "PromocodeModel",
                 "type": "object"
             },
-            "ApiResponseOk[ResponseCancelPayment].df6c1ab": {
-                "properties": {
-                    "status": {
-                        "default": "OK",
-                        "title": "Status",
-                        "type": "string"
-                    },
-                    "code": {
-                        "default": 0,
-                        "title": "Code",
-                        "type": "integer"
-                    },
-                    "message": {
-                        "default": "",
-                        "title": "Message",
-                        "type": "string"
-                    },
-                    "data": {
-                        "$ref": "#/components/schemas/ApiResponseOk[ResponseCancelPayment].df6c1ab.ResponseCancelPayment"
-                    }
-                },
-                "required": [
-                    "data"
-                ],
-                "title": "ApiResponseOk[ResponseCancelPayment]",
-                "type": "object"
-            },
-            "ApiResponseOk[ResponseCancelPayment].df6c1ab.ResponseCancelPayment": {
-                "properties": {
-                    "order_id": {
-                        "description": "Id заказа",
-                        "title": "Order Id",
-                        "type": "string"
-                    },
-                    "status": {
-                        "allOf": [
-                            {
-                                "$ref": "#/components/schemas/ApiResponseOk[ResponseEstimate].df6c1ab.EstimateStatus"
-                            }
-                        ],
-                        "description": "Статус оплаты"
-                    }
-                },
-                "required": [
-                    "order_id",
-                    "status"
-                ],
-                "title": "ResponseCancelPayment",
-                "type": "object"
-            },
             "ApiResponseOk[ResponseEstimate].df6c1ab": {
                 "properties": {
                     "status": {
@@ -3756,18 +3814,6 @@
                 ],
                 "title": "ApiResponseOk[ResponseEstimate]",
                 "type": "object"
-            },
-            "ApiResponseOk[ResponseEstimate].df6c1ab.EstimateStatus": {
-                "enum": [
-                    "created",
-                    "canceled",
-                    "paid",
-                    "ordering",
-                    "completed",
-                    "failed"
-                ],
-                "title": "EstimateStatus",
-                "type": "string"
             },
             "ApiResponseOk[ResponseEstimate].df6c1ab.HotelRegionModel": {
                 "properties": {
@@ -3996,11 +4042,6 @@
                         "title": "Id",
                         "type": "string"
                     },
-                    "order_id": {
-                        "description": "Id заказа",
-                        "title": "Order Id",
-                        "type": "string"
-                    },
                     "details": {
                         "allOf": [
                             {
@@ -4026,17 +4067,20 @@
                                 "type": "null"
                             }
                         ],
-                        "default": null,
                         "description": "Комментарий заказчика",
                         "title": "User Comment"
                     },
-                    "status": {
-                        "allOf": [
+                    "promocode": {
+                        "anyOf": [
                             {
-                                "$ref": "#/components/schemas/ApiResponseOk[ResponseEstimate].df6c1ab.EstimateStatus"
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
                             }
                         ],
-                        "description": "Статус оплаты"
+                        "description": "Промокод",
+                        "title": "Promocode"
                     },
                     "expired_at": {
                         "description": "Дата и время истечения",
@@ -4047,10 +4091,10 @@
                 },
                 "required": [
                     "id",
-                    "order_id",
                     "details",
                     "user",
-                    "status",
+                    "user_comment",
+                    "promocode",
                     "expired_at"
                 ],
                 "title": "ResponseEstimate",
@@ -4180,12 +4224,24 @@
                         "description": "Окончательная сумма штрафа за отмену бронирования",
                         "title": "Amount Final Charge",
                         "type": "number"
+                    },
+                    "amount_discount": {
+                        "description": "Сумма скидки",
+                        "title": "Amount Discount",
+                        "type": "number"
+                    },
+                    "amount_total": {
+                        "description": "Общая сумма",
+                        "title": "Amount Total",
+                        "type": "number"
                     }
                 },
                 "required": [
                     "start_at",
                     "end_at",
-                    "amount_final_charge"
+                    "amount_final_charge",
+                    "amount_discount",
+                    "amount_total"
                 ],
                 "title": "ResponseOrderRateCancellationPolicy",
                 "type": "object"
@@ -4195,6 +4251,16 @@
                     "final_amount": {
                         "description": "Окончательная цена",
                         "title": "Final Amount",
+                        "type": "number"
+                    },
+                    "total_amount": {
+                        "description": "Общая цена",
+                        "title": "Total Amount",
+                        "type": "number"
+                    },
+                    "discount_amount": {
+                        "description": "Сумма скидки",
+                        "title": "Discount Amount",
                         "type": "number"
                     },
                     "currency_code": {
@@ -4224,6 +4290,8 @@
                 },
                 "required": [
                     "final_amount",
+                    "total_amount",
+                    "discount_amount",
                     "currency_code",
                     "tax_data",
                     "cancellation_penalties"
@@ -5944,6 +6012,16 @@
                         "title": "Final Amount",
                         "type": "number"
                     },
+                    "total_amount": {
+                        "description": "Общая цена",
+                        "title": "Total Amount",
+                        "type": "number"
+                    },
+                    "discount_amount": {
+                        "description": "Сумма скидки",
+                        "title": "Discount Amount",
+                        "type": "number"
+                    },
                     "currency_code": {
                         "allOf": [
                             {
@@ -5971,6 +6049,8 @@
                 },
                 "required": [
                     "final_amount",
+                    "total_amount",
+                    "discount_amount",
                     "currency_code",
                     "tax_data",
                     "cancellation_penalties"
@@ -6437,6 +6517,16 @@
                         "title": "Final Amount",
                         "type": "number"
                     },
+                    "total_amount": {
+                        "description": "Общая цена",
+                        "title": "Total Amount",
+                        "type": "number"
+                    },
+                    "discount_amount": {
+                        "description": "Сумма скидки",
+                        "title": "Discount Amount",
+                        "type": "number"
+                    },
                     "currency_code": {
                         "allOf": [
                             {
@@ -6464,6 +6554,8 @@
                 },
                 "required": [
                     "final_amount",
+                    "total_amount",
+                    "discount_amount",
                     "currency_code",
                     "tax_data",
                     "cancellation_penalties"
@@ -6995,6 +7087,110 @@
                     "trip_type"
                 ],
                 "title": "ReviewModel",
+                "type": "object"
+            },
+            "ApiResponseOk[StaticsSM].df6c1ab": {
+                "properties": {
+                    "status": {
+                        "default": "OK",
+                        "title": "Status",
+                        "type": "string"
+                    },
+                    "code": {
+                        "default": 0,
+                        "title": "Code",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "default": "",
+                        "title": "Message",
+                        "type": "string"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticsSM"
+                    }
+                },
+                "required": [
+                    "data"
+                ],
+                "title": "ApiResponseOk[StaticsSM]",
+                "type": "object"
+            },
+            "ApiResponseOk[StaticsSM].df6c1ab.StaticSM": {
+                "properties": {
+                    "locale": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "title": "Locale",
+                        "type": "object"
+                    },
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "locale",
+                    "name"
+                ],
+                "title": "StaticSM",
+                "type": "object"
+            },
+            "ApiResponseOk[StaticsSM].df6c1ab.StaticsSM": {
+                "properties": {
+                    "beddings": {
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
+                        },
+                        "title": "Beddings",
+                        "type": "array"
+                    },
+                    "meals": {
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
+                        },
+                        "title": "Meals",
+                        "type": "array"
+                    },
+                    "room_amenities": {
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
+                        },
+                        "title": "Room Amenities",
+                        "type": "array"
+                    },
+                    "serp_filters": {
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
+                        },
+                        "title": "Serp Filters",
+                        "type": "array"
+                    },
+                    "socket_types": {
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
+                        },
+                        "title": "Socket Types",
+                        "type": "array"
+                    },
+                    "taxes": {
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
+                        },
+                        "title": "Taxes",
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "beddings",
+                    "meals",
+                    "room_amenities",
+                    "serp_filters",
+                    "socket_types",
+                    "taxes"
+                ],
+                "title": "StaticsSM",
                 "type": "object"
             },
             "ApiResponseOk[StoryModel].df6c1ab": {
@@ -7539,7 +7735,7 @@
                     "guests": {
                         "description": "Список гостей",
                         "items": {
-                            "$ref": "#/components/schemas/PostSearchSchema.c1edd82.GuestSchema"
+                            "$ref": "#/components/schemas/PostSearchSchema.c1edd82.SearchGuestSchema"
                         },
                         "title": "Guests",
                         "type": "array"
@@ -7573,6 +7769,43 @@
                 ],
                 "title": "BaseSearchSchema",
                 "type": "object"
+            },
+            "GetOrdersParamsSchema.8f03914": {
+                "properties": {
+                    "limit": {
+                        "default": 10,
+                        "description": "Количество элементов на странице",
+                        "title": "Limit",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "default": 0,
+                        "description": "Количество пропускаемых элементов",
+                        "title": "Offset",
+                        "type": "integer"
+                    },
+                    "type": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/GetOrdersParamsSchema.8f03914.OrderTypes"
+                            }
+                        ],
+                        "default": "all",
+                        "description": "Тип заказа"
+                    }
+                },
+                "title": "GetOrdersParamsSchema",
+                "type": "object"
+            },
+            "GetOrdersParamsSchema.8f03914.OrderTypes": {
+                "enum": [
+                    "active",
+                    "last",
+                    "cancelled",
+                    "all"
+                ],
+                "title": "OrderTypes",
+                "type": "string"
             },
             "HeadersSchema.df6c1ab": {
                 "properties": {
@@ -7690,6 +7923,54 @@
                     }
                 },
                 "title": "PatchGuestSchema",
+                "type": "object"
+            },
+            "PatchOrderEstimateSchema.8f03914": {
+                "properties": {
+                    "user_comment": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null,
+                        "description": "Комментарий заказчика",
+                        "title": "User Comment"
+                    },
+                    "promocode": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null,
+                        "description": "Промокод",
+                        "title": "Promocode"
+                    },
+                    "guests": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null,
+                        "description": "Список id гостей",
+                        "title": "Guests"
+                    }
+                },
+                "title": "PatchOrderEstimateSchema",
                 "type": "object"
             },
             "PatchPromocodeSchema.1814de5": {
@@ -8175,6 +8456,20 @@
                 "title": "PostMultiCompleteSchema",
                 "type": "object"
             },
+            "PostOrderAssembleSchema.8f03914": {
+                "properties": {
+                    "estimate_id": {
+                        "description": "Id оценки",
+                        "title": "Estimate Id",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "estimate_id"
+                ],
+                "title": "PostOrderAssembleSchema",
+                "type": "object"
+            },
             "PostOrderEstimateSchema.8f03914": {
                 "properties": {
                     "book_hash": {
@@ -8183,25 +8478,12 @@
                         "type": "string"
                     },
                     "guests": {
-                        "description": "Список id гостей",
+                        "description": "Список гостей",
                         "items": {
-                            "type": "string"
+                            "$ref": "#/components/schemas/PostSearchSchema.c1edd82.SearchGuestSchema"
                         },
                         "title": "Guests",
                         "type": "array"
-                    },
-                    "user_comment": {
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ],
-                        "default": null,
-                        "description": "Комментарий заказчика",
-                        "title": "User Comment"
                     }
                 },
                 "required": [
@@ -8354,7 +8636,7 @@
                     "guests": {
                         "description": "Список гостей",
                         "items": {
-                            "$ref": "#/components/schemas/PostSearchSchema.c1edd82.GuestSchema"
+                            "$ref": "#/components/schemas/PostSearchSchema.c1edd82.SearchGuestSchema"
                         },
                         "title": "Guests",
                         "type": "array"
@@ -8404,7 +8686,7 @@
                 "title": "PostSearchSchema",
                 "type": "object"
             },
-            "PostSearchSchema.c1edd82.GuestSchema": {
+            "PostSearchSchema.c1edd82.SearchGuestSchema": {
                 "properties": {
                     "adults": {
                         "description": "Количество взрослых",
@@ -8425,7 +8707,7 @@
                 "required": [
                     "adults"
                 ],
-                "title": "GuestSchema",
+                "title": "SearchGuestSchema",
                 "type": "object"
             },
             "PostStorySchema.1814de5": {
