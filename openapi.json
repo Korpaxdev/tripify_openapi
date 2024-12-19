@@ -873,12 +873,33 @@
             "post": {
                 "summary": "/api/orders/assemblies",
                 "operationId": "post__api_orders_assemblies",
-                "description": "<br/><br/>",
+                "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseAssemble].df6c1ab'>ApiResponseOk[ResponseAssemble]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
                 ],
                 "parameters": [],
-                "responses": {},
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponseOk[ResponseAssemble].df6c1ab"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Unprocessable Entity",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiResponseValidationErr.df6c1ab"
+                                }
+                            }
+                        }
+                    }
+                },
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -3820,6 +3841,53 @@
                     "condition"
                 ],
                 "title": "PromocodeModel",
+                "type": "object"
+            },
+            "ApiResponseOk[ResponseAssemble].df6c1ab": {
+                "properties": {
+                    "status": {
+                        "default": "OK",
+                        "title": "Status",
+                        "type": "string"
+                    },
+                    "code": {
+                        "default": 0,
+                        "title": "Code",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "default": "",
+                        "title": "Message",
+                        "type": "string"
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/ApiResponseOk[ResponseAssemble].df6c1ab.ResponseAssemble"
+                    }
+                },
+                "required": [
+                    "data"
+                ],
+                "title": "ApiResponseOk[ResponseAssemble]",
+                "type": "object"
+            },
+            "ApiResponseOk[ResponseAssemble].df6c1ab.ResponseAssemble": {
+                "properties": {
+                    "assemble_id": {
+                        "description": "Id сборки",
+                        "title": "Assemble Id",
+                        "type": "string"
+                    },
+                    "payment_url": {
+                        "description": "Ссылка на оплату",
+                        "title": "Payment Url",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "assemble_id",
+                    "payment_url"
+                ],
+                "title": "ResponseAssemble",
                 "type": "object"
             },
             "ApiResponseOk[ResponseEstimate].df6c1ab": {
