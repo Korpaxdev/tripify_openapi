@@ -92,6 +92,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -135,6 +147,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -213,6 +237,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -256,6 +292,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -319,6 +367,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -371,6 +431,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -423,6 +495,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -495,6 +579,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -549,6 +645,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -954,6 +1062,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -999,6 +1119,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1169,6 +1301,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1232,6 +1376,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1286,6 +1442,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1349,6 +1517,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1436,6 +1616,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1499,6 +1691,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1508,51 +1712,6 @@
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiResponseOk[ReviewModel].df6c1ab"
-                                }
-                            }
-                        }
-                    },
-                    "422": {
-                        "description": "Unprocessable Entity",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ApiResponseValidationErr.df6c1ab"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "/api/hotels/static": {
-            "get": {
-                "summary": "/api/hotels/static",
-                "operationId": "get__api_hotels_static",
-                "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[StaticsSM].df6c1ab'>ApiResponseOk[StaticsSM]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
-                "tags": [
-                    "hotel"
-                ],
-                "parameters": [
-                    {
-                        "name": "authorization",
-                        "in": "header",
-                        "schema": {
-                            "description": "Токен доступа",
-                            "title": "Authorization",
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "Токен доступа"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab"
                                 }
                             }
                         }
@@ -1613,6 +1772,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1656,6 +1827,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1719,6 +1902,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1771,6 +1966,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1823,6 +2030,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1901,6 +2120,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -1955,6 +2186,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2012,6 +2255,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2081,6 +2336,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2126,6 +2393,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2169,6 +2448,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2247,6 +2538,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2290,6 +2593,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2353,6 +2668,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2405,6 +2732,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2457,6 +2796,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2535,6 +2886,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2578,6 +2941,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2641,6 +3016,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2693,6 +3080,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {
@@ -2747,6 +3146,18 @@
                         },
                         "required": true,
                         "description": "Токен доступа"
+                    },
+                    {
+                        "name": "accept-language",
+                        "in": "header",
+                        "schema": {
+                            "default": "ru",
+                            "description": "Язык",
+                            "title": "Accept-Language",
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Язык"
                     }
                 ],
                 "responses": {},
@@ -3242,6 +3653,14 @@
                         },
                         "title": "Serp Filters",
                         "type": "array"
+                    },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -3668,6 +4087,14 @@
                         "title": "Serp Filters",
                         "type": "array"
                     },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
+                        "type": "array"
+                    },
                     "min_payment_type": {
                         "anyOf": [
                             {
@@ -3742,6 +4169,26 @@
                 ],
                 "title": "SerpFilters",
                 "type": "string"
+            },
+            "ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel": {
+                "properties": {
+                    "name": {
+                        "description": "Наименование",
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "locale": {
+                        "description": "Перевод",
+                        "title": "Locale",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "locale"
+                ],
+                "title": "TranslationModel",
+                "type": "object"
             },
             "ApiResponseOk[PromocodeModel].df6c1ab": {
                 "properties": {
@@ -4064,6 +4511,14 @@
                             "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.SerpFilters"
                         },
                         "title": "Serp Filters",
+                        "type": "array"
+                    },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
                         "type": "array"
                     }
                 },
@@ -4430,10 +4885,18 @@
                         "title": "Room Amenities",
                         "type": "array"
                     },
+                    "room_amenities_translated": {
+                        "description": "Список удобств комнаты",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Room Amenities Translated",
+                        "type": "array"
+                    },
                     "name_struct": {
                         "allOf": [
                             {
-                                "$ref": "#/components/schemas/ApiResponseOk[ResponseEstimate].df6c1ab.RoomNameStructModel"
+                                "$ref": "#/components/schemas/ApiResponseOk[ResponseHotelRooms].df6c1ab.RoomNameStructModel"
                             }
                         ],
                         "description": "Структура имени комнаты"
@@ -4447,47 +4910,6 @@
                     "name_struct"
                 ],
                 "title": "RoomGroupModel",
-                "type": "object"
-            },
-            "ApiResponseOk[ResponseEstimate].df6c1ab.RoomNameStructModel": {
-                "description": "Модель структуры имени комнаты",
-                "properties": {
-                    "bathroom": {
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ],
-                        "description": "Информация о ванне комнаты",
-                        "title": "Bathroom"
-                    },
-                    "bedding_type": {
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ],
-                        "description": "Информация о спальном месте",
-                        "title": "Bedding Type"
-                    },
-                    "main_name": {
-                        "default": null,
-                        "description": "Основное название комнаты",
-                        "title": "Main Name",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "bathroom",
-                    "bedding_type"
-                ],
-                "title": "RoomNameStructModel",
                 "type": "object"
             },
             "ApiResponseOk[ResponseEstimate].df6c1ab.UserSchema": {
@@ -5225,6 +5647,18 @@
                         "description": "Тип питания",
                         "title": "Meal"
                     },
+                    "meal_translated": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null,
+                        "description": "Тип питания"
+                    },
                     "payment_types": {
                         "description": "Список способов оплаты",
                         "items": {
@@ -5244,10 +5678,10 @@
             },
             "ApiResponseOk[ResponseHotelRooms].df6c1ab.ResponseHotelRoom": {
                 "properties": {
-                    "name": {
-                        "description": "Название комнаты",
-                        "title": "Name",
-                        "type": "string"
+                    "room_group_id": {
+                        "description": "Id группы комнат",
+                        "title": "Room Group Id",
+                        "type": "integer"
                     },
                     "images": {
                         "description": "Список ссылок на изображения комнаты",
@@ -5257,6 +5691,11 @@
                         "title": "Images",
                         "type": "array"
                     },
+                    "name": {
+                        "description": "Название комнаты",
+                        "title": "Name",
+                        "type": "string"
+                    },
                     "room_amenities": {
                         "description": "Список удобств комнаты",
                         "items": {
@@ -5264,6 +5703,22 @@
                         },
                         "title": "Room Amenities",
                         "type": "array"
+                    },
+                    "room_amenities_translated": {
+                        "description": "Список удобств комнаты",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Room Amenities Translated",
+                        "type": "array"
+                    },
+                    "name_struct": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/ApiResponseOk[ResponseHotelRooms].df6c1ab.RoomNameStructModel"
+                            }
+                        ],
+                        "description": "Структура имени комнаты"
                     },
                     "rates": {
                         "description": "Список тарифов",
@@ -5275,9 +5730,11 @@
                     }
                 },
                 "required": [
-                    "name",
+                    "room_group_id",
                     "images",
+                    "name",
                     "room_amenities",
+                    "name_struct",
                     "rates"
                 ],
                 "title": "ResponseHotelRoom",
@@ -5342,6 +5799,18 @@
                         "title": "Name",
                         "type": "string"
                     },
+                    "name_translated": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null,
+                        "description": "Налоговый идентификатор"
+                    },
                     "included_by_supplier": {
                         "description": "Признак включения в стоимость",
                         "title": "Included By Supplier",
@@ -5387,6 +5856,47 @@
                     }
                 },
                 "title": "ResponseTaxData",
+                "type": "object"
+            },
+            "ApiResponseOk[ResponseHotelRooms].df6c1ab.RoomNameStructModel": {
+                "description": "Модель структуры имени комнаты",
+                "properties": {
+                    "bathroom": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "description": "Информация о ванне комнаты",
+                        "title": "Bathroom"
+                    },
+                    "bedding_type": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "description": "Информация о спальном месте",
+                        "title": "Bedding Type"
+                    },
+                    "main_name": {
+                        "default": null,
+                        "description": "Основное название комнаты",
+                        "title": "Main Name",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "bathroom",
+                    "bedding_type"
+                ],
+                "title": "RoomNameStructModel",
                 "type": "object"
             },
             "ApiResponseOk[ResponseHotels].df6c1ab": {
@@ -5563,6 +6073,14 @@
                             "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.SerpFilters"
                         },
                         "title": "Serp Filters",
+                        "type": "array"
+                    },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
                         "type": "array"
                     }
                 },
@@ -5890,6 +6408,14 @@
                         },
                         "title": "Serp Filters",
                         "type": "array"
+                    },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -6189,10 +6715,18 @@
                         "title": "Room Amenities",
                         "type": "array"
                     },
+                    "room_amenities_translated": {
+                        "description": "Список удобств комнаты",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Room Amenities Translated",
+                        "type": "array"
+                    },
                     "name_struct": {
                         "allOf": [
                             {
-                                "$ref": "#/components/schemas/ApiResponseOk[ResponseEstimate].df6c1ab.RoomNameStructModel"
+                                "$ref": "#/components/schemas/ApiResponseOk[ResponseHotelRooms].df6c1ab.RoomNameStructModel"
                             }
                         ],
                         "description": "Структура имени комнаты"
@@ -6382,6 +6916,14 @@
                             "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.SerpFilters"
                         },
                         "title": "Serp Filters",
+                        "type": "array"
+                    },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
                         "type": "array"
                     }
                 },
@@ -6728,10 +7270,18 @@
                         "title": "Room Amenities",
                         "type": "array"
                     },
+                    "room_amenities_translated": {
+                        "description": "Список удобств комнаты",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Room Amenities Translated",
+                        "type": "array"
+                    },
                     "name_struct": {
                         "allOf": [
                             {
-                                "$ref": "#/components/schemas/ApiResponseOk[ResponseEstimate].df6c1ab.RoomNameStructModel"
+                                "$ref": "#/components/schemas/ApiResponseOk[ResponseHotelRooms].df6c1ab.RoomNameStructModel"
                             }
                         ],
                         "description": "Структура имени комнаты"
@@ -6979,6 +7529,14 @@
                         "title": "Serp Filters",
                         "type": "array"
                     },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
+                        "type": "array"
+                    },
                     "min_price": {
                         "allOf": [
                             {
@@ -7189,110 +7747,6 @@
                     "trip_type"
                 ],
                 "title": "ReviewModel",
-                "type": "object"
-            },
-            "ApiResponseOk[StaticsSM].df6c1ab": {
-                "properties": {
-                    "status": {
-                        "default": "OK",
-                        "title": "Status",
-                        "type": "string"
-                    },
-                    "code": {
-                        "default": 0,
-                        "title": "Code",
-                        "type": "integer"
-                    },
-                    "message": {
-                        "default": "",
-                        "title": "Message",
-                        "type": "string"
-                    },
-                    "data": {
-                        "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticsSM"
-                    }
-                },
-                "required": [
-                    "data"
-                ],
-                "title": "ApiResponseOk[StaticsSM]",
-                "type": "object"
-            },
-            "ApiResponseOk[StaticsSM].df6c1ab.StaticSM": {
-                "properties": {
-                    "locale": {
-                        "additionalProperties": {
-                            "type": "string"
-                        },
-                        "title": "Locale",
-                        "type": "object"
-                    },
-                    "name": {
-                        "title": "Name",
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "locale",
-                    "name"
-                ],
-                "title": "StaticSM",
-                "type": "object"
-            },
-            "ApiResponseOk[StaticsSM].df6c1ab.StaticsSM": {
-                "properties": {
-                    "beddings": {
-                        "items": {
-                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
-                        },
-                        "title": "Beddings",
-                        "type": "array"
-                    },
-                    "meals": {
-                        "items": {
-                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
-                        },
-                        "title": "Meals",
-                        "type": "array"
-                    },
-                    "room_amenities": {
-                        "items": {
-                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
-                        },
-                        "title": "Room Amenities",
-                        "type": "array"
-                    },
-                    "serp_filters": {
-                        "items": {
-                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
-                        },
-                        "title": "Serp Filters",
-                        "type": "array"
-                    },
-                    "socket_types": {
-                        "items": {
-                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
-                        },
-                        "title": "Socket Types",
-                        "type": "array"
-                    },
-                    "taxes": {
-                        "items": {
-                            "$ref": "#/components/schemas/ApiResponseOk[StaticsSM].df6c1ab.StaticSM"
-                        },
-                        "title": "Taxes",
-                        "type": "array"
-                    }
-                },
-                "required": [
-                    "beddings",
-                    "meals",
-                    "room_amenities",
-                    "serp_filters",
-                    "socket_types",
-                    "taxes"
-                ],
-                "title": "StaticsSM",
                 "type": "object"
             },
             "ApiResponseOk[StoryModel].df6c1ab": {
@@ -7744,6 +8198,14 @@
                         },
                         "title": "Serp Filters",
                         "type": "array"
+                    },
+                    "serp_filters_translated": {
+                        "description": "Список удобств отеля",
+                        "items": {
+                            "$ref": "#/components/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab.TranslationModel"
+                        },
+                        "title": "Serp Filters Translated",
+                        "type": "array"
                     }
                 },
                 "required": [
@@ -7914,6 +8376,12 @@
                     "authorization": {
                         "description": "Токен доступа",
                         "title": "Authorization",
+                        "type": "string"
+                    },
+                    "accept-language": {
+                        "default": "ru",
+                        "description": "Язык",
+                        "title": "Accept-Language",
                         "type": "string"
                     }
                 },
