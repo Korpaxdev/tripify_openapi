@@ -34,7 +34,7 @@
         "/api/users": {
             "post": {
                 "summary": "/api/users",
-                "operationId": "post__api_users",
+                "operationId": "on_post_register_user",
                 "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[UserModel].df6c1ab'>ApiResponseOk[UserModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "user"
@@ -76,7 +76,7 @@
         "/api/users/profile": {
             "get": {
                 "summary": "/api/users/profile",
-                "operationId": "get__api_users_profile",
+                "operationId": "on_get_profile",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[UserModel].df6c1ab'>ApiResponseOk[UserModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "user"
@@ -131,7 +131,7 @@
             },
             "patch": {
                 "summary": "/api/users/profile",
-                "operationId": "patch__api_users_profile",
+                "operationId": "on_patch_profile",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[UserModel].df6c1ab'>ApiResponseOk[UserModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "user"
@@ -197,7 +197,7 @@
         "/api/favorites": {
             "get": {
                 "summary": "/api/favorites",
-                "operationId": "get__api_favorites",
+                "operationId": "on_get_favorites",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseFavorites[FavoriteModel]].df6c1ab'>ApiResponseOk[ResponseFavorites[FavoriteModel]]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "favorite"
@@ -276,7 +276,7 @@
             },
             "post": {
                 "summary": "/api/favorites",
-                "operationId": "post__api_favorites",
+                "operationId": "on_post_favorites",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[FavoriteModel].df6c1ab'>ApiResponseOk[FavoriteModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "favorite"
@@ -342,7 +342,7 @@
         "/api/favorites/{favorite_id}": {
             "delete": {
                 "summary": "/api/favorites/{favorite_id}",
-                "operationId": "delete__api_favorites_{favorite_id}",
+                "operationId": "on_delete_favorite",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[FavoriteModel].df6c1ab'>ApiResponseOk[FavoriteModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "favorite"
@@ -406,7 +406,7 @@
             },
             "get": {
                 "summary": "/api/favorites/{favorite_id}",
-                "operationId": "get__api_favorites_{favorite_id}",
+                "operationId": "on_get_favorite",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[PatchedFavoriteModel].df6c1ab'>ApiResponseOk[PatchedFavoriteModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "favorite"
@@ -470,7 +470,7 @@
             },
             "patch": {
                 "summary": "/api/favorites/{favorite_id}",
-                "operationId": "patch__api_favorites_{favorite_id}",
+                "operationId": "on_patch_favorite",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[FavoriteModel].df6c1ab'>ApiResponseOk[FavoriteModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "favorite"
@@ -545,7 +545,7 @@
         "/api/favorites/{favorite_id}/hotels/{hotel_id}": {
             "delete": {
                 "summary": "/api/favorites/{favorite_id}/hotels/{hotel_id}",
-                "operationId": "delete__api_favorites_{favorite_id}_hotels_{hotel_id}",
+                "operationId": "on_delete_favorite_hotel",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[FavoriteModel].df6c1ab'>ApiResponseOk[FavoriteModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "favorite"
@@ -620,7 +620,7 @@
         "/api/favorites/{favorite_id}/copy": {
             "post": {
                 "summary": "/api/favorites/{favorite_id}/copy",
-                "operationId": "post__api_favorites_{favorite_id}_copy",
+                "operationId": "on_post_copy_favorite",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[FavoriteModel].df6c1ab'>ApiResponseOk[FavoriteModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "favorite"
@@ -686,7 +686,7 @@
         "/api/orders": {
             "get": {
                 "summary": "/api/orders",
-                "operationId": "get__api_orders",
+                "operationId": "on_get_orders",
                 "description": "<br/><b>Query</b>: <a href='/schemas/GetOrdersParamsSchema.8f03914'>GetOrdersParamsSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseOrders].df6c1ab'>ApiResponseOk[ResponseOrders]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
@@ -759,7 +759,7 @@
         "/api/orders/{order_id}": {
             "get": {
                 "summary": "/api/orders/{order_id}",
-                "operationId": "get__api_orders_{order_id}",
+                "operationId": "on_get_order",
                 "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseOrder].df6c1ab'>ApiResponseOk[ResponseOrder]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
@@ -802,7 +802,7 @@
         "/api/orders/{order_id}/cancel": {
             "post": {
                 "summary": "/api/orders/{order_id}/cancel",
-                "operationId": "post__api_orders_{order_id}_cancel",
+                "operationId": "on_post_cancel_order",
                 "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseOrder].df6c1ab'>ApiResponseOk[ResponseOrder]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
@@ -845,7 +845,7 @@
         "/api/orders/estimates": {
             "post": {
                 "summary": "/api/orders/estimates",
-                "operationId": "post__api_orders_estimates",
+                "operationId": "on_post_estimates",
                 "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseEstimate].df6c1ab'>ApiResponseOk[ResponseEstimate]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
@@ -887,7 +887,7 @@
         "/api/orders/estimates/{estimate_id}": {
             "get": {
                 "summary": "/api/orders/estimates/{estimate_id}",
-                "operationId": "get__api_orders_estimates_{estimate_id}",
+                "operationId": "on_get_estimate",
                 "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseEstimate].df6c1ab'>ApiResponseOk[ResponseEstimate]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
@@ -928,7 +928,7 @@
             },
             "patch": {
                 "summary": "/api/orders/estimates/{estimate_id}",
-                "operationId": "patch__api_orders_estimates_{estimate_id}",
+                "operationId": "on_patch_estimate",
                 "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseEstimate].df6c1ab'>ApiResponseOk[ResponseEstimate]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
@@ -980,7 +980,7 @@
         "/api/orders/assemblies": {
             "post": {
                 "summary": "/api/orders/assemblies",
-                "operationId": "post__api_orders_assemblies",
+                "operationId": "on_post_assemblies",
                 "description": "<br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseAssemble].df6c1ab'>ApiResponseOk[ResponseAssemble]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "order"
@@ -1022,7 +1022,7 @@
         "/api/hotels": {
             "get": {
                 "summary": "/api/hotels",
-                "operationId": "get__api_hotels",
+                "operationId": "on_get_hotels",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseHotels].df6c1ab'>ApiResponseOk[ResponseHotels]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1103,7 +1103,7 @@
         "/api/hotels/multicomplete": {
             "post": {
                 "summary": "/api/hotels/multicomplete",
-                "operationId": "post__api_hotels_multicomplete",
+                "operationId": "on_post_multicomplete",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseMultiComplete].df6c1ab'>ApiResponseOk[ResponseMultiComplete]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1169,7 +1169,7 @@
         "/api/hotels/search": {
             "post": {
                 "summary": "/api/hotels/search",
-                "operationId": "post__api_hotels_search",
+                "operationId": "on_post_search",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PostSearchParamsSchema.c1edd82'>PostSearchParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseSearchHotels].df6c1ab'>ApiResponseOk[ResponseSearchHotels]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1235,8 +1235,11 @@
                         "schema": {
                             "default": null,
                             "description": "Рейтинг отеля",
+                            "items": {
+                                "type": "integer"
+                            },
                             "title": "Star Rating",
-                            "type": "number"
+                            "type": "array"
                         },
                         "required": false,
                         "description": "Рейтинг отеля"
@@ -1351,7 +1354,7 @@
         "/api/hotels/{hotel_id}": {
             "get": {
                 "summary": "/api/hotels/{hotel_id}",
-                "operationId": "get__api_hotels_{hotel_id}",
+                "operationId": "on_get_hotel",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[HotelWithoutRoomsModel].df6c1ab'>ApiResponseOk[HotelWithoutRoomsModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1417,7 +1420,7 @@
         "/api/hotels/{hotel_id}/price": {
             "post": {
                 "summary": "/api/hotels/{hotel_id}/price",
-                "operationId": "post__api_hotels_{hotel_id}_price",
+                "operationId": "on_post_hotel_price",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseHotelPrice].df6c1ab'>ApiResponseOk[ResponseHotelPrice]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1492,7 +1495,7 @@
         "/api/hotels/{hotel_id}/rooms": {
             "post": {
                 "summary": "/api/hotels/{hotel_id}/rooms",
-                "operationId": "post__api_hotels_{hotel_id}_rooms",
+                "operationId": "on_post_hotel_rooms",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseHotelRooms].df6c1ab'>ApiResponseOk[ResponseHotelRooms]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1567,7 +1570,7 @@
         "/api/hotels/{hotel_id}/reviews": {
             "get": {
                 "summary": "/api/hotels/{hotel_id}/reviews",
-                "operationId": "get__api_hotels_{hotel_id}_reviews",
+                "operationId": "on_get_hotel_reviews",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseHotelReviews].df6c1ab'>ApiResponseOk[ResponseHotelReviews]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1657,7 +1660,7 @@
         "/api/hotels/{hotel_id}/reviews/{review_id}": {
             "get": {
                 "summary": "/api/hotels/{hotel_id}/reviews/{review_id}",
-                "operationId": "get__api_hotels_{hotel_id}_reviews_{review_id}",
+                "operationId": "on_get_hotel_review",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ReviewModel].df6c1ab'>ApiResponseOk[ReviewModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "hotel"
@@ -1732,7 +1735,7 @@
         "/api/guests": {
             "get": {
                 "summary": "/api/guests",
-                "operationId": "get__api_guests",
+                "operationId": "on_get_guests",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseGuests].df6c1ab'>ApiResponseOk[ResponseGuests]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "guest"
@@ -1811,7 +1814,7 @@
             },
             "post": {
                 "summary": "/api/guests",
-                "operationId": "post__api_guests",
+                "operationId": "on_post_guests",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[GuestModel].df6c1ab'>ApiResponseOk[GuestModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "guest"
@@ -1877,7 +1880,7 @@
         "/api/guests/{guest_id}": {
             "delete": {
                 "summary": "/api/guests/{guest_id}",
-                "operationId": "delete__api_guests_{guest_id}",
+                "operationId": "on_delete_guest",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[GuestModel].df6c1ab'>ApiResponseOk[GuestModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "guest"
@@ -1941,7 +1944,7 @@
             },
             "get": {
                 "summary": "/api/guests/{guest_id}",
-                "operationId": "get__api_guests_{guest_id}",
+                "operationId": "on_get_guest",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[GuestModel].df6c1ab'>ApiResponseOk[GuestModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "guest"
@@ -2005,7 +2008,7 @@
             },
             "patch": {
                 "summary": "/api/guests/{guest_id}",
-                "operationId": "patch__api_guests_{guest_id}",
+                "operationId": "on_patch_guest",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[GuestModel].df6c1ab'>ApiResponseOk[GuestModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "guest"
@@ -2080,7 +2083,7 @@
         "/api/stories": {
             "get": {
                 "summary": "/api/stories",
-                "operationId": "get__api_stories",
+                "operationId": "on_get_stories",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[GetStoriesSchema].df6c1ab'>ApiResponseOk[GetStoriesSchema]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "story"
@@ -2161,7 +2164,7 @@
         "/api/stories/{story_id}": {
             "get": {
                 "summary": "/api/stories/{story_id}",
-                "operationId": "get__api_stories_{story_id}",
+                "operationId": "on_get_story",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[StoryModel].df6c1ab'>ApiResponseOk[StoryModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "story"
@@ -2227,7 +2230,7 @@
         "/api/top/countries": {
             "get": {
                 "summary": "/api/top/countries",
-                "operationId": "get__api_top_countries",
+                "operationId": "on_get_top_countries",
                 "description": "<br/><b>Query</b>: <a href='/schemas/LimitParamsSchema.df6c1ab'>LimitParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[list[CountryModel]].df6c1ab'>ApiResponseOk[list[CountryModel]]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "top"
@@ -2296,7 +2299,7 @@
         "/api/top/hotels": {
             "get": {
                 "summary": "/api/top/hotels",
-                "operationId": "get__api_top_hotels",
+                "operationId": "on_get_top_hotels",
                 "description": "<br/><b>Query</b>: <a href='/schemas/TopHotelsParamsSchema.8b18edf'>TopHotelsParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[list[HotelWithoutRoomsModel]].df6c1ab'>ApiResponseOk[list[HotelWithoutRoomsModel]]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "top"
@@ -2377,7 +2380,7 @@
         "/api/admin/system_settings": {
             "get": {
                 "summary": "/api/admin/system_settings",
-                "operationId": "get__api_admin_system_settings",
+                "operationId": "admin_on_get_system_settings",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[SystemSettingsModel].df6c1ab'>ApiResponseOk[SystemSettingsModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2432,7 +2435,7 @@
             },
             "patch": {
                 "summary": "/api/admin/system_settings",
-                "operationId": "patch__api_admin_system_settings",
+                "operationId": "admin_on_patch_system_settings",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[SystemSettingsModel].df6c1ab'>ApiResponseOk[SystemSettingsModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2498,7 +2501,7 @@
         "/api/admin/stories": {
             "get": {
                 "summary": "/api/admin/stories",
-                "operationId": "get__api_admin_stories",
+                "operationId": "admin_on_get_stories",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[GetStoriesSchema].df6c1ab'>ApiResponseOk[GetStoriesSchema]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2577,7 +2580,7 @@
             },
             "post": {
                 "summary": "/api/admin/stories",
-                "operationId": "post__api_admin_stories",
+                "operationId": "admin_on_post_stories",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[StoryModel].df6c1ab'>ApiResponseOk[StoryModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2643,7 +2646,7 @@
         "/api/admin/stories/{story_id}": {
             "delete": {
                 "summary": "/api/admin/stories/{story_id}",
-                "operationId": "delete__api_admin_stories_{story_id}",
+                "operationId": "admin_on_delete_story",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[StoryModel].df6c1ab'>ApiResponseOk[StoryModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2707,7 +2710,7 @@
             },
             "get": {
                 "summary": "/api/admin/stories/{story_id}",
-                "operationId": "get__api_admin_stories_{story_id}",
+                "operationId": "admin_on_get_story",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[StoryModel].df6c1ab'>ApiResponseOk[StoryModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2771,7 +2774,7 @@
             },
             "patch": {
                 "summary": "/api/admin/stories/{story_id}",
-                "operationId": "patch__api_admin_stories_{story_id}",
+                "operationId": "admin_on_patch_story",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[StoryModel].df6c1ab'>ApiResponseOk[StoryModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2846,7 +2849,7 @@
         "/api/admin/promocodes": {
             "get": {
                 "summary": "/api/admin/promocodes",
-                "operationId": "get__api_admin_promocodes",
+                "operationId": "admin_on_get_promocodes",
                 "description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[GetPromocodesSchema].df6c1ab'>ApiResponseOk[GetPromocodesSchema]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2925,7 +2928,7 @@
             },
             "post": {
                 "summary": "/api/admin/promocodes",
-                "operationId": "post__api_admin_promocodes",
+                "operationId": "admin_on_post_promocodes",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[PromocodeModel].df6c1ab'>ApiResponseOk[PromocodeModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -2991,7 +2994,7 @@
         "/api/admin/promocodes/{promocode_id}": {
             "delete": {
                 "summary": "/api/admin/promocodes/{promocode_id}",
-                "operationId": "delete__api_admin_promocodes_{promocode_id}",
+                "operationId": "admin_on_delete_promocode",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[PromocodeModel].df6c1ab'>ApiResponseOk[PromocodeModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -3055,7 +3058,7 @@
             },
             "patch": {
                 "summary": "/api/admin/promocodes/{promocode_id}",
-                "operationId": "patch__api_admin_promocodes_{promocode_id}",
+                "operationId": "admin_on_patch_promocode",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[PromocodeModel].df6c1ab'>ApiResponseOk[PromocodeModel]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -3130,7 +3133,7 @@
         "/api/admin/upload": {
             "post": {
                 "summary": "/api/admin/upload",
-                "operationId": "post__api_admin_upload",
+                "operationId": "admin_on_post_upload",
                 "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><br/>",
                 "tags": [
                     "admin"
@@ -9149,8 +9152,11 @@
                     "star_rating": {
                         "default": null,
                         "description": "Рейтинг отеля",
+                        "items": {
+                            "type": "integer"
+                        },
                         "title": "Star Rating",
-                        "type": "number"
+                        "type": "array"
                     },
                     "rating": {
                         "default": null,
