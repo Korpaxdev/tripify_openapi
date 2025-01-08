@@ -1170,6 +1170,70 @@
         }
       }
     },
+    "/api/orders/assemblies/{assemble_id}/status": {
+      "get": {
+        "summary": "/api/orders/assemblies/{assemble_id}/status",
+        "operationId": "on_get_assemble_status",
+        "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseAssembleStatus].df6c1ab'>ApiResponseOk[ResponseAssembleStatus]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
+        "tags": ["order"],
+        "parameters": [
+          {
+            "name": "assemble_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": ""
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "schema": {
+              "description": "Токен доступа",
+              "title": "Authorization",
+              "type": "string"
+            },
+            "required": true,
+            "description": "Токен доступа"
+          },
+          {
+            "name": "accept-language",
+            "in": "header",
+            "schema": {
+              "default": "ru",
+              "description": "Язык",
+              "title": "Accept-Language",
+              "type": "string"
+            },
+            "required": false,
+            "description": "Язык"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseOk[ResponseAssembleStatus].df6c1ab"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseValidationErr.df6c1ab"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/hotels": {
       "get": {
         "summary": "/api/hotels",
@@ -3697,6 +3761,63 @@
         },
         "required": ["code", "percent", "condition"],
         "title": "PromocodeModel",
+        "type": "object"
+      },
+      "ApiResponseOk[ResponseAssembleStatus].df6c1ab": {
+        "properties": {
+          "status": {
+            "default": "OK",
+            "title": "Status",
+            "type": "string"
+          },
+          "code": {
+            "default": 0,
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "default": "",
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ApiResponseOk[ResponseAssembleStatus].df6c1ab.ResponseAssembleStatus"
+          }
+        },
+        "required": ["data"],
+        "title": "ApiResponseOk[ResponseAssembleStatus]",
+        "type": "object"
+      },
+      "ApiResponseOk[ResponseAssembleStatus].df6c1ab.AssembleStatuses": {
+        "enum": [
+          "created",
+          "canceled",
+          "paid",
+          "ordering",
+          "completed",
+          "failed"
+        ],
+        "title": "AssembleStatuses",
+        "type": "string"
+      },
+      "ApiResponseOk[ResponseAssembleStatus].df6c1ab.ResponseAssembleStatus": {
+        "properties": {
+          "id": {
+            "description": "Id сборки",
+            "title": "Id",
+            "type": "string"
+          },
+          "status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseAssembleStatus].df6c1ab.AssembleStatuses"
+              }
+            ],
+            "description": "Статус сборки"
+          }
+        },
+        "required": ["id", "status"],
+        "title": "ResponseAssembleStatus",
         "type": "object"
       },
       "ApiResponseOk[ResponseAssemble].df6c1ab": {
