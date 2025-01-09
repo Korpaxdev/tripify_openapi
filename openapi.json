@@ -3595,7 +3595,7 @@
           "stories": {
             "description": "Список историй",
             "items": {
-              "$ref": "#/components/schemas/ApiResponseOk[GetStoriesSchema].df6c1ab.StoryModel"
+              "$ref": "#/components/schemas/ApiResponseOk[GetStoriesSchema].df6c1ab.ResponseStorySchema"
             },
             "title": "Stories",
             "type": "array"
@@ -3605,8 +3605,7 @@
         "title": "GetStoriesSchema",
         "type": "object"
       },
-      "ApiResponseOk[GetStoriesSchema].df6c1ab.StoryModel": {
-        "description": "Модель истории",
+      "ApiResponseOk[GetStoriesSchema].df6c1ab.ResponseStorySchema": {
         "properties": {
           "created_at": {
             "description": "Дата создания",
@@ -3640,10 +3639,16 @@
             "minLength": 1,
             "title": "Telegraph Url",
             "type": "string"
+          },
+          "is_viewed": {
+            "default": false,
+            "description": "Признак просмотра",
+            "title": "Is Viewed",
+            "type": "boolean"
           }
         },
         "required": ["preview", "telegraph_url"],
-        "title": "StoryModel",
+        "title": "ResponseStorySchema",
         "type": "object"
       },
       "ApiResponseOk[GuestModel].df6c1ab": {
@@ -7983,11 +7988,52 @@
             "type": "string"
           },
           "data": {
-            "$ref": "#/components/schemas/ApiResponseOk[GetStoriesSchema].df6c1ab.StoryModel"
+            "$ref": "#/components/schemas/ApiResponseOk[StoryModel].df6c1ab.StoryModel"
           }
         },
         "required": ["data"],
         "title": "ApiResponseOk[StoryModel]",
+        "type": "object"
+      },
+      "ApiResponseOk[StoryModel].df6c1ab.StoryModel": {
+        "description": "Модель истории",
+        "properties": {
+          "created_at": {
+            "description": "Дата создания",
+            "format": "date-time",
+            "title": "Created At",
+            "type": "string"
+          },
+          "updated_at": {
+            "description": "Дата обновления",
+            "format": "date-time",
+            "title": "Updated At",
+            "type": "string"
+          },
+          "id": {
+            "description": "Id истории",
+            "title": "Id",
+            "type": "string"
+          },
+          "preview": {
+            "description": "Url ссылка на превью",
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "title": "Preview",
+            "type": "string"
+          },
+          "telegraph_url": {
+            "description": "Url ссылка на телеграф статью",
+            "format": "uri",
+            "maxLength": 2083,
+            "minLength": 1,
+            "title": "Telegraph Url",
+            "type": "string"
+          }
+        },
+        "required": ["preview", "telegraph_url"],
+        "title": "StoryModel",
         "type": "object"
       },
       "ApiResponseOk[SystemSettingsModel].df6c1ab": {
