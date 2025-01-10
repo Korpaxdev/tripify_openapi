@@ -28,6 +28,9 @@
     },
     {
       "name": "admin"
+    },
+    {
+      "name": "static"
     }
   ],
   "paths": {
@@ -3340,6 +3343,61 @@
             "multipart/form-data": {
               "schema": {
                 "$ref": "#/components/schemas/UploadSchema.1814de5"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/statics/serp_filters": {
+      "get": {
+        "summary": "/api/statics/serp_filters",
+        "operationId": "on_get_serp_filters",
+        "description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[list[ResponseSerpFiltersSchema]].df6c1ab'>ApiResponseOk[list[ResponseSerpFiltersSchema]]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
+        "tags": ["static"],
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "schema": {
+              "description": "Токен доступа",
+              "title": "Authorization",
+              "type": "string"
+            },
+            "required": true,
+            "description": "Токен доступа"
+          },
+          {
+            "name": "accept-language",
+            "in": "header",
+            "schema": {
+              "default": "ru",
+              "description": "Язык",
+              "title": "Accept-Language",
+              "type": "string"
+            },
+            "required": false,
+            "description": "Язык"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseOk[list[ResponseSerpFiltersSchema]].df6c1ab"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseValidationErr.df6c1ab"
+                }
               }
             }
           }
@@ -8450,6 +8508,71 @@
           "serp_filters"
         ],
         "title": "HotelWithoutRoomsModel",
+        "type": "object"
+      },
+      "ApiResponseOk[list[ResponseSerpFiltersSchema]].df6c1ab": {
+        "properties": {
+          "status": {
+            "default": "OK",
+            "title": "Status",
+            "type": "string"
+          },
+          "code": {
+            "default": 0,
+            "title": "Code",
+            "type": "integer"
+          },
+          "message": {
+            "default": "",
+            "title": "Message",
+            "type": "string"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/ApiResponseOk[list[ResponseSerpFiltersSchema]].df6c1ab.ResponseSerpFiltersSchema"
+            },
+            "title": "Data",
+            "type": "array"
+          }
+        },
+        "required": ["data"],
+        "title": "ApiResponseOk[list[ResponseSerpFiltersSchema]]",
+        "type": "object"
+      },
+      "ApiResponseOk[list[ResponseSerpFiltersSchema]].df6c1ab.ResponseSerpFiltersSchema": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "icon": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Icon"
+          },
+          "name_translated": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseFavorite].df6c1ab.TranslationModel"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": ["id", "name", "icon", "name_translated"],
+        "title": "ResponseSerpFiltersSchema",
         "type": "object"
       },
       "ApiResponseValidationErr.df6c1ab": {
