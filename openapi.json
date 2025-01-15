@@ -6459,15 +6459,21 @@
             "title": "Order Api Id",
             "type": "integer"
           },
-          "room_group_id": {
-            "description": "Id номера",
-            "title": "Room Group Id",
-            "type": "integer"
+          "hotel": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrder].df6c1ab.HotelWithoutRoomsModel"
+              }
+            ],
+            "description": "Отель"
           },
-          "hotel_id": {
-            "description": "Id отеля",
-            "title": "Hotel Id",
-            "type": "string"
+          "room_group": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrder].df6c1ab.RoomGroupModel"
+              }
+            ],
+            "description": "Номер"
           },
           "guests": {
             "description": "Гости",
@@ -6489,22 +6495,6 @@
             "description": "Id пользователя",
             "title": "User Id",
             "type": "string"
-          },
-          "hotel": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrder].df6c1ab.HotelWithoutRoomsModel"
-              }
-            ],
-            "description": "Отель"
-          },
-          "room": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrder].df6c1ab.RoomGroupModel"
-              }
-            ],
-            "description": "Номер"
           },
           "status": {
             "allOf": [
@@ -6549,13 +6539,11 @@
         "required": [
           "id",
           "order_api_id",
-          "room_group_id",
-          "hotel_id",
+          "hotel",
+          "room_group",
           "guests",
           "rate",
           "user_id",
-          "hotel",
-          "room",
           "status",
           "checkin_at",
           "checkout_at",
@@ -7013,15 +7001,21 @@
             "title": "Order Api Id",
             "type": "integer"
           },
-          "room_group_id": {
-            "description": "Id номера",
-            "title": "Room Group Id",
-            "type": "integer"
+          "hotel": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrders].df6c1ab.HotelWithoutRoomsModel"
+              }
+            ],
+            "description": "Отель"
           },
-          "hotel_id": {
-            "description": "Id отеля",
-            "title": "Hotel Id",
-            "type": "string"
+          "room_group": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrders].df6c1ab.RoomGroupModel"
+              }
+            ],
+            "description": "Номер"
           },
           "guests": {
             "description": "Гости",
@@ -7043,22 +7037,6 @@
             "description": "Id пользователя",
             "title": "User Id",
             "type": "string"
-          },
-          "hotel": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrders].df6c1ab.HotelWithoutRoomsModel"
-              }
-            ],
-            "description": "Отель"
-          },
-          "room": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/ApiResponseOk[ResponseOrders].df6c1ab.RoomGroupModel"
-              }
-            ],
-            "description": "Номер"
           },
           "status": {
             "allOf": [
@@ -7103,13 +7081,11 @@
         "required": [
           "id",
           "order_api_id",
-          "room_group_id",
-          "hotel_id",
+          "hotel",
+          "room_group",
           "guests",
           "rate",
           "user_id",
-          "hotel",
-          "room",
           "status",
           "checkin_at",
           "checkout_at",
