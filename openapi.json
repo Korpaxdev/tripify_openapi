@@ -2528,6 +2528,18 @@
             "description": "Страна"
           },
           {
+            "name": "force",
+            "in": "query",
+            "schema": {
+              "default": false,
+              "description": "Принудительное обновление данных",
+              "title": "Force",
+              "type": "boolean"
+            },
+            "required": false,
+            "description": "Принудительное обновление данных"
+          },
+          {
             "name": "authorization",
             "in": "header",
             "schema": {
@@ -4203,7 +4215,10 @@
           "guests": {
             "description": "Список гостей",
             "items": {
-              "$ref": "#/components/schemas/ApiResponseOk[ResponseGuests].df6c1ab.GuestModel"
+              "items": {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseGuests].df6c1ab.GuestModel"
+              },
+              "type": "array"
             },
             "title": "Guests",
             "type": "array"
@@ -5688,6 +5703,11 @@
             "title": "Book Hash",
             "type": "string"
           },
+          "allotment": {
+            "description": "Количество мест",
+            "title": "Allotment",
+            "type": "integer"
+          },
           "meal": {
             "anyOf": [
               {
@@ -5721,7 +5741,7 @@
             "type": "array"
           }
         },
-        "required": ["book_hash", "meal", "payment_types"],
+        "required": ["book_hash", "allotment", "meal", "payment_types"],
         "title": "ResponseHotelRate",
         "type": "object"
       },
@@ -6478,7 +6498,10 @@
           "guests": {
             "description": "Гости",
             "items": {
-              "$ref": "#/components/schemas/ApiResponseOk[ResponseGuests].df6c1ab.GuestModel"
+              "items": {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseGuests].df6c1ab.GuestModel"
+              },
+              "type": "array"
             },
             "title": "Guests",
             "type": "array"
@@ -7020,7 +7043,10 @@
           "guests": {
             "description": "Гости",
             "items": {
-              "$ref": "#/components/schemas/ApiResponseOk[ResponseGuests].df6c1ab.GuestModel"
+              "items": {
+                "$ref": "#/components/schemas/ApiResponseOk[ResponseGuests].df6c1ab.GuestModel"
+              },
+              "type": "array"
             },
             "title": "Guests",
             "type": "array"
@@ -8214,9 +8240,17 @@
             "description": "Пол пользователя"
           },
           "phone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
             "description": "Номер телефона пользователя",
-            "title": "Phone",
-            "type": "string"
+            "title": "Phone"
           },
           "email": {
             "anyOf": [
@@ -8237,7 +8271,7 @@
             "type": "integer"
           }
         },
-        "required": ["phone", "telegram_id"],
+        "required": ["telegram_id"],
         "title": "UserModel",
         "type": "object"
       },
@@ -8871,7 +8905,10 @@
             "anyOf": [
               {
                 "items": {
-                  "type": "string"
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
                 },
                 "type": "array"
               },
@@ -8982,27 +9019,63 @@
       "PatchUserSchema.94f23c2": {
         "properties": {
           "first_name": {
+            "anyOf": [
+              {
+                "maxLength": 100,
+                "minLength": 3,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "default": null,
             "description": "Имя пользователя",
-            "maxLength": 100,
-            "minLength": 3,
-            "title": "First Name",
-            "type": "string"
+            "title": "First Name"
           },
           "last_name": {
+            "anyOf": [
+              {
+                "maxLength": 100,
+                "minLength": 3,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "default": null,
             "description": "Фамилия пользователя",
-            "maxLength": 100,
-            "minLength": 3,
-            "title": "Last Name",
-            "type": "string"
+            "title": "Last Name"
           },
           "email": {
+            "anyOf": [
+              {
+                "format": "email",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
             "default": null,
             "description": "Email пользователя",
-            "format": "email",
-            "title": "Email",
-            "type": "string"
+            "title": "Email"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "maxLength": 16,
+                "minLength": 10,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "description": "Номер телефона пользователя. Должен быть уникальным",
+            "title": "Phone"
           },
           "gender": {
             "anyOf": [
@@ -9660,11 +9733,19 @@
             "title": "Username"
           },
           "phone": {
+            "anyOf": [
+              {
+                "maxLength": 16,
+                "minLength": 10,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
             "description": "Номер телефона пользователя. Должен быть уникальным",
-            "maxLength": 16,
-            "minLength": 10,
-            "title": "Phone",
-            "type": "string"
+            "title": "Phone"
           },
           "gender": {
             "anyOf": [
@@ -9685,7 +9766,7 @@
             "type": "integer"
           }
         },
-        "required": ["phone", "telegram_id"],
+        "required": ["telegram_id"],
         "title": "PostUserSchema",
         "type": "object"
       },
@@ -9707,6 +9788,12 @@
             "description": "Страна",
             "title": "Country",
             "type": "string"
+          },
+          "force": {
+            "default": false,
+            "description": "Принудительное обновление данных",
+            "title": "Force",
+            "type": "boolean"
           }
         },
         "title": "TopHotelsParamsSchema",
