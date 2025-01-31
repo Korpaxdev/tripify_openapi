@@ -31,6 +31,9 @@
 		},
 		{
 			"name": "static"
+		},
+		{
+			"name": "document"
 		}
 	],
 	"paths": {
@@ -3755,6 +3758,63 @@
 							"application/json": {
 								"schema": {
 									"$ref": "#/components/schemas/ApiResponseOk[list[ResponseSerpFiltersSchema]].df6c1ab"
+								}
+							}
+						}
+					},
+					"422": {
+						"description": "Unprocessable Entity",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ApiResponseValidationErr.df6c1ab"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"/api/documents": {
+			"get": {
+				"summary": "/api/documents",
+				"operationId": "on_get_documents",
+				"description": "<br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[list[DocumentModel]].df6c1ab'>ApiResponseOk[list[DocumentModel]]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
+				"tags": [
+					"document"
+				],
+				"parameters": [
+					{
+						"name": "authorization",
+						"in": "header",
+						"schema": {
+							"description": "Токен доступа",
+							"title": "Authorization",
+							"type": "string"
+						},
+						"required": true,
+						"description": "Токен доступа"
+					},
+					{
+						"name": "accept-language",
+						"in": "header",
+						"schema": {
+							"default": "ru",
+							"description": "Язык",
+							"title": "Accept-Language",
+							"type": "string"
+						},
+						"required": false,
+						"description": "Язык"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ApiResponseOk[list[DocumentModel]].df6c1ab"
 								}
 							}
 						}
@@ -9054,6 +9114,37 @@
 					"name"
 				],
 				"title": "CountryModel",
+				"type": "object"
+			},
+			"ApiResponseOk[list[DocumentModel]].df6c1ab": {
+				"properties": {
+					"status": {
+						"default": "OK",
+						"title": "Status",
+						"type": "string"
+					},
+					"code": {
+						"default": 0,
+						"title": "Code",
+						"type": "integer"
+					},
+					"message": {
+						"default": "",
+						"title": "Message",
+						"type": "string"
+					},
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/ApiResponseOk[GetDocumentsResponseSchema].df6c1ab.DocumentModel"
+						},
+						"title": "Data",
+						"type": "array"
+					}
+				},
+				"required": [
+					"data"
+				],
+				"title": "ApiResponseOk[list[DocumentModel]]",
 				"type": "object"
 			},
 			"ApiResponseOk[list[HotelWithoutRoomsModel]].df6c1ab": {
