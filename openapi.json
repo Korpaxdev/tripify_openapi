@@ -2007,7 +2007,7 @@
 			"get": {
 				"summary": "/api/guests",
 				"operationId": "on_get_guests",
-				"description": "<br/><b>Query</b>: <a href='/schemas/PaginationParamsSchema.df6c1ab'>PaginationParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseGuests].df6c1ab'>ApiResponseOk[ResponseGuests]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
+				"description": "<br/><b>Query</b>: <a href='/schemas/GetGuestsParamsSchema.b3fef3d'>GetGuestsParamsSchema</a><br/><b>Headers</b>: <a href='/schemas/HeadersSchema.df6c1ab'>HeadersSchema</a><br/><b>200</b>: <a href='/schemas/ApiResponseOk[ResponseGuests].df6c1ab'>ApiResponseOk[ResponseGuests]</a><br/><b>422</b>: <a href='/schemas/ApiResponseValidationErr.df6c1ab'>ApiResponseValidationErr</a><br/><br/>",
 				"tags": [
 					"guest"
 				],
@@ -2035,6 +2035,25 @@
 						},
 						"required": false,
 						"description": "Количество пропускаемых элементов"
+					},
+					{
+						"name": "is_child",
+						"in": "query",
+						"schema": {
+							"anyOf": [
+								{
+									"type": "boolean"
+								},
+								{
+									"type": "null"
+								}
+							],
+							"default": null,
+							"description": "Маркер ребенка",
+							"title": "Is Child"
+						},
+						"required": false,
+						"description": "Маркер ребенка"
 					},
 					{
 						"name": "authorization",
@@ -5127,20 +5146,41 @@
 						"type": "string"
 					},
 					"first_name": {
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "null"
+							}
+						],
 						"description": "Имя пользователя",
-						"title": "First Name",
-						"type": "string"
+						"title": "First Name"
 					},
 					"last_name": {
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "null"
+							}
+						],
 						"description": "Фамилия пользователя",
-						"title": "Last Name",
-						"type": "string"
+						"title": "Last Name"
 					},
 					"email": {
+						"anyOf": [
+							{
+								"format": "email",
+								"type": "string"
+							},
+							{
+								"type": "null"
+							}
+						],
 						"description": "Email пользователя",
-						"format": "email",
-						"title": "Email",
-						"type": "string"
+						"title": "Email"
 					}
 				},
 				"required": [
@@ -9558,6 +9598,37 @@
 					}
 				},
 				"title": "FavoritesParams",
+				"type": "object"
+			},
+			"GetGuestsParamsSchema.b3fef3d": {
+				"properties": {
+					"limit": {
+						"default": 10,
+						"description": "Количество элементов на странице",
+						"title": "Limit",
+						"type": "integer"
+					},
+					"offset": {
+						"default": 0,
+						"description": "Количество пропускаемых элементов",
+						"title": "Offset",
+						"type": "integer"
+					},
+					"is_child": {
+						"anyOf": [
+							{
+								"type": "boolean"
+							},
+							{
+								"type": "null"
+							}
+						],
+						"default": null,
+						"description": "Маркер ребенка",
+						"title": "Is Child"
+					}
+				},
+				"title": "GetGuestsParamsSchema",
 				"type": "object"
 			},
 			"GetOrdersParamsSchema.8f03914": {
